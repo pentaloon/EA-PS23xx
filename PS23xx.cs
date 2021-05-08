@@ -9,7 +9,7 @@ namespace PS2000
     public class PS23xx : IDisposable
     {
         // must use the serial specific implementation instead of the more generic message based session
-        // in order to allow termination chars to be blocked completely!!!
+        // in order to allow termination chars to be handled correctly
         readonly SerialSession serialSession = null;
         private readonly double m_NominalVoltage;
         private readonly double m_NominalCurrent;
@@ -22,9 +22,8 @@ namespace PS2000
                 {
                     serialSession = (SerialSession)rm.Open(_resourceName.ToUpper());
                     serialSession.SendEndEnabled = false;
-                    // Workaround to fix reads which to be terminated abnormally 
-                    // by taking a returned byte as termchar (such as 0xA) ...
-                    // TerminationCharacterEnabled is ignored, unless SerialTerminationMethod is set to None ... thanks NI
+                    // Workaround to fix readouts. 
+                    // TerminationCharacterEnabled flag is ignored, unless SerialTerminationMethod is set to None ... thanks NI
                     serialSession.ReadTermination = Ivi.Visa.SerialTerminationMethod.None;
                     serialSession.TerminationCharacterEnabled = false;
                 }
