@@ -1,4 +1,4 @@
-# Custom .NET/C# driver for EA-PS23xx power supplies
+# Custom .NET/C# driver for EA-PS23xx power supplies based on NI-VISA .NET
 Provided "as is" for learning purposes - please do not ask for support. 
 
 **Attention** power supplies may cause severe damage! 
