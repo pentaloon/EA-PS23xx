@@ -1,4 +1,4 @@
-﻿namespace ATS.Instruments.Drivers.EA.PS2000
+﻿namespace PS2000
 {
     #region Device specific data
 
