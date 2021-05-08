@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ATS.Instruments.Drivers.EA.PS2000
+namespace PS2000
 {
     #region Driver specific exceptions
 
