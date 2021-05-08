@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Linq;
-using static ATS.Instruments.Drivers.EA.PS2000.DevConfig;
+using static PS2000.DevConfig;
 
-namespace ATS.Instruments.Drivers.EA.PS2000
+namespace PS2000
 {
     internal class Telegram
     {
